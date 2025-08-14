@@ -9,7 +9,7 @@ on:
 jobs:
   terraform:
     name: Deploy Terraform Infrastructure
-    runs-on: [self-hosted]
+    runs-on: self-hosted
 
     defaults:
       run:
