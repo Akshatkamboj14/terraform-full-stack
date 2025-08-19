@@ -6,9 +6,9 @@ sudo hostnamectl set-hostname master
 sudo kubeadm init --cri-socket=unix:///var/run/crio/crio.sock
  
 # Configure kubeconfig for ubuntu user
-mkdir -p /home/ubuntu/.kube
-cp /etc/kubernetes/admin.conf /home/ubuntu/.kube/config
-chown ubuntu:ubuntu /home/ubuntu/.kube/config
+sudo mkdir -p /home/ubuntu/.kube
+sudo cp /etc/kubernetes/admin.conf /home/ubuntu/.kube/config
+sudo chown ubuntu:ubuntu /home/ubuntu/.kube/config
  
 # Install Weave Net CNI
 sudo -u ubuntu kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
