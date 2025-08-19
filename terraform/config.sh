@@ -3,7 +3,7 @@ set -e
 
 sudo hostnamectl set-hostname master
 
-sudo kubeadm init --kubernetes-version=1.26.15
+sudo kubeadm init --cri-socket=unix:///var/run/crio/crio.sock
  
 # Configure kubeconfig for ubuntu user
 mkdir -p /home/ubuntu/.kube
